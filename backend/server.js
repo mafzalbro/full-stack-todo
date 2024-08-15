@@ -23,10 +23,10 @@ app.use('/api', require('./routes/notesRoutes'));
 app.use(express.static(path.join(__dirname, '../frontend')))
 
 // // Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//   console.log(`Server is running on http://localhost:${PORT}`);
+// });
 
 // Export the app as a serverless function
 module.exports = app;

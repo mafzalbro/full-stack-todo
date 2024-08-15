@@ -23,8 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('noteForm').addEventListener('submit', async (event) => {
     event.preventDefault();
-    const sanitizedTitle = DOMPurify.sanitize(title.value);
-    const sanitizedDescription = DOMPurify.sanitize(description.value);
+    // const sanitizedTitle = DOMPurify.sanitize(title.value);
+    const sanitizedTitle = title.value;
+    // const sanitizedDescription = DOMPurify.sanitize(description.value);
+    const sanitizedDescription = description.value;
 
     toggleLoader(true);
     disableForm(true);
