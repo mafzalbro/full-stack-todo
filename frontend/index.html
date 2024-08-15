@@ -3,19 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notes App</title>
+  <title>Full Stack To Do App By Afzal</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Full Stack To Do App By Afzal - A powerful and user-friendly task management application built with modern web technologies.">
+  <meta name="keywords" content="Full Stack, To Do App, Task Management, JavaScript, HTML, CSS, M. Afzal">
+  <meta name="author" content="M. Afzal">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Full Stack To Do App By Afzal">
+  <meta property="og:description" content="A powerful and user-friendly task management application built with modern web technologies.">
+  <meta property="og:image" content="favicon.jpg">
+  <meta property="og:url" content="https://full-stack-todo.vercel.app">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Full Stack To Do App By Afzal">
+  <meta name="twitter:description" content="A powerful and user-friendly task management application built with modern web technologies.">
+  <meta name="twitter:image" content="favicon.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.jpg">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Full Stack To Do App By Afzal",
+    "url": "https://full-stack-todo.vercel.app",
+    "description": "A powerful and user-friendly task management application built with modern web technologies.",
+    "author": {
+      "@type": "Person",
+      "name": "M. Afzal"
+    },
+    "image": "https://full-stack-todo.vercel.app/favicon.jpg"
+  }
+  </script>
 </head>
 <body>
-  <div class="container">
-    <h1>Notes App</h1>
-    <form id="noteForm">
-      <input type="text" id="title" placeholder="Title" required>
-      <textarea id="description" placeholder="Description" required></textarea>
-      <button type="submit">Add Note</button>
-    </form>
-    <div id="notesList"></div>
+  <div class="loader-container" id="loader-container">
+    <div id="loader" class="loader"></div> <!-- Loader element -->
   </div>
+  <div class="container">
+    <h1>Full Stack To Do App By Afzal</h1>
+    <div id="notesList"></div>
+    <button id="addNoteButton" class="add-note">+</button>
+  </div>
+  
+  <!-- Popup Form -->
+  <div id="noteFormPopup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <form id="noteForm">
+        <input type="text" id="title" placeholder="Title" required>
+        <textarea id="description" placeholder="Description" required></textarea>
+        <button type="submit" id="submitButton">Add Note</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+<footer>
+  <p>© 2024 M. Afzal. Follow me on  
+    <a href="https://github.com/mafzalbro" target="_blank">
+      <i class="fab fa-github"></i> &nbsp; GitHub
+    </a>
+  </p>
+  <p><a href="https://github.com/mafzalbro/full-stack-todo" target="_blank">Check the Code</a>
+  </p>
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.4/purify.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
